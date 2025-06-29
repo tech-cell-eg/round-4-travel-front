@@ -72,3 +72,107 @@
         }
     }
 }
+
+.detailsPage {
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #05073C;
+        margin-bottom: 24px;
+        margin-top: 50px;
+    }
+
+    .include {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    left: -25px;
+                }
+
+
+            }
+
+            &.include_red {
+                li {
+                    &::before {
+                        background-color: #EFF7F1;
+                    }
+                }
+            }
+
+            &.include_blue {
+                li {
+                    &::before {
+                        background-color: #FFE5E5;
+                    }
+                }
+            }
+        }
+    }
+
+    .itinerary {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 18px;
+        border-left: 1px dotted #eb662b;
+        margin-left: 16px;
+
+        li {
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                background-color: white;
+                border-radius: 50%;
+                border: 3px solid #eb662b;
+                left: -27px;
+            }
+
+            &:last-child::before,
+            &:first-child::before {
+                width: 20px;
+                height: 20px;
+                background-color: #eb662b;
+                left: -28px;
+            }
+        }
+    }
+
+    .customReviews {
+        .review {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 100px;
+            width: 100%;
+
+            div {
+
+                h4 {
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                }
+
+            }
+
+        }
+    }
+}

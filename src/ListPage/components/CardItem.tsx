@@ -28,7 +28,7 @@ function CardItem({ id, features, destination, rating, title, review_count, shor
                 <div>
                     <p className='font-semibold text-lg text-[#b9b6b6] text-center line-through'>${discount_price}</p>
                     <p className='text-primaryDesign font-medium text-[19px] mb-6 text-center'>From ${original_price}</p>
-                    <Link to={`/${id}`} className='rounded-xl border border-[#EB662B] p-3  text-[#EB662B] hover:bg-[#EB662B] hover:text-white'>View Details</Link>
+                    <Link to={`/details/${id}`} onClick={()=>scrollTo(0,0)} className='rounded-xl border border-[#EB662B] p-3  text-[#EB662B] hover:bg-[#EB662B] hover:text-white'>View Details</Link>
                 </div>
 
             </div>

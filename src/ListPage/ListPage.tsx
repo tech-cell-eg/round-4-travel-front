@@ -5,14 +5,14 @@ import SearchItem from './components/SearchItem'
 import type { Paginate, Cards } from '@/shared/reuseComponents/types';
 import { getList } from "@/shared/api/getList";
 
-function ListPage() {
+function ListPage({ setDataItems }: { setDataItems: React.Dispatch<React.SetStateAction<Cards[]>> }) {
   const [data, setData] = useState<Cards[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [paginate, setPaginate] = useState<Paginate>({ total_pages: 0 });
   useEffect(() => {
     const url = `${import.meta.env.VITE_BASE_URL
       }tours?page=${currentPage}`;
-    getList(url, setData, setPaginate);
+    getList(url, setData, setPaginate, setDataItems);
   }, [currentPage]);
 
   //Start search
