@@ -1,4 +1,4 @@
-import type { Cards } from "@/HomePage/components/types";
+import type { Cards } from "../reuseComponents/types";
 
 export const getCards = async (setData: (data: Cards[]) => void) => {
     let url = `${import.meta.env.VITE_BASE_URL}tours`;
