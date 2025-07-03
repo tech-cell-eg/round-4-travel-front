@@ -55,9 +55,9 @@ export function CheckboxField({ setContentSearch }: { setContentSearch: React.Di
         },
     })
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
+    /*function onSubmit(data: z.infer<typeof FormSchema>) {
 
-    }
+    }*/
 
     return (
         <Form {...form}>
